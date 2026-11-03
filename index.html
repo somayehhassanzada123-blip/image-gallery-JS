@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="gallery">
+    <header class="gallery-header">
+      <p class="eyebrow">EXPLORE THE WORLD</p>
+      <h1>Image Gallery</h1>
+      <p class="subtitle">A collection of beautiful moments.</p>
+    </header>
+
+    <section class="gallery-content">
+      <div class="featured">
+        <img id="mainImage" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85" alt="Beautiful landscape">
+        <div class="image-caption">
+          <span id="imageNumber">01 / 06</span>
+          <h2 id="imageTitle">Mountain Escape</h2>
+          <p id="imageDescription">Discover the beauty of nature.</p>
+        </div>
+      </div>
+
+      <div class="thumbnail-panel">
+        <h3>Choose an image</h3>
+        <div class="thumbnails" id="thumbnails">
+          <button class="thumbnail active" data-index="0" aria-label="Show Mountain Escape">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&q=80" alt="Mountain landscape">
+          </button>
+          <button class="thumbnail" data-index="1" aria-label="Show Ocean View">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Ocean">
+          </button>
+          <button class="thumbnail" data-index="2" aria-label="Show City Lights">
+            <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=400&q=80" alt="City at night">
+          </button>
+          <button class="thumbnail" data-index="3" aria-label="Show Forest Walk">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=400&q=80" alt="Forest">
+          </button>
+          <button class="thumbnail" data-index="4" aria-label="Show Desert Dreams">
+            <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=400&q=80" alt="Desert">
+          </button>
+          <button class="thumbnail" data-index="5" aria-label="Show Quiet Lake">
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=400&q=80" alt="Lake and mountains">
+          </button>
+        </div>
+        <p class="hint">Click any thumbnail to view it.</p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

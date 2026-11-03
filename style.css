@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 48px 20px;
+  color: #20252b;
+  background: #f4f5f7;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.gallery { width: min(1120px, 100%); margin: 0 auto; }
+
+.gallery-header { margin-bottom: 30px; }
+.eyebrow {
+  margin: 0 0 10px;
+  color: #8b765c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 6vw, 54px);
+}
+.subtitle { margin: 10px 0 0; color: #7b8188; }
+
+.gallery-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(230px, 0.8fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.featured {
+  position: relative;
+  min-height: 510px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #d8dce0;
+  box-shadow: 0 15px 40px rgba(24, 34, 44, 0.12);
+}
+.featured > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 510px;
+  object-fit: cover;
+  transition: opacity .25s ease;
+}
+.image-caption {
+  position: absolute;
+  right: 0; bottom: 0; left: 0;
+  padding: 75px 28px 28px;
+  color: white;
+  background: linear-gradient(transparent, rgba(0,0,0,.75));
+}
+.image-caption span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  opacity: .85;
+}
+.image-caption h2 {
+  margin: 9px 0 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+}
+.image-caption p { margin: 0; color: rgba(255,255,255,.82); }
+
+.thumbnail-panel {
+  padding: 22px;
+  border: 1px solid #e7e9ec;
+  border-radius: 18px;
+  background: white;
+}
+.thumbnail-panel h3 { margin: 0 0 18px; font-size: 16px; }
+.thumbnails { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.thumbnail {
+  padding: 0;
+  height: 112px;
+  overflow: hidden;
+  border: 3px solid transparent;
+  border-radius: 11px;
+  background: #eee;
+  cursor: pointer;
+  transition: transform .2s, border-color .2s;
+}
+.thumbnail:hover { transform: translateY(-3px); }
+.thumbnail.active { border-color: #9a7955; }
+.thumbnail img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.hint { margin: 18px 0 0; color: #92979d; font-size: 12px; }
+
+@media (max-width: 760px) {
+  body { padding: 30px 15px; }
+  .gallery-content { grid-template-columns: 1fr; }
+  .featured, .featured > img { min-height: 390px; }
+  .thumbnail-panel { padding: 18px; }
+  .thumbnail { height: 100px; }
+}
